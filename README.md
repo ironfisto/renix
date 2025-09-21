@@ -1,5 +1,7 @@
 # Renix - Security Tools Development Environment
 
+![Renix Banner](image.png)
+
 A comprehensive, reproducible security testing and development environment powered by Nix. This project provides a unified environment for various security tools, debugging utilities, and programming languages, all managed through Nix.
 
 ## � Project Structure

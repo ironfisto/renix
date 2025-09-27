@@ -12,7 +12,7 @@ let
   python = import ./src/langs/python.nix { inherit pkgs; };
   
   # Import recon tools
-  recon = import ./src/recon/nmap.nix { inherit pkgs; };
+  recon = import ./src/recon/default.nix { inherit pkgs; };
 
   # Combine all packages
   allPackages = 

@@ -2,17 +2,14 @@
 
 {
   packages = with pkgs; [
-    # SQLmap and its dependencies
+    # SQLmap CLI tool
     sqlmap
-    python3  # SQLmap requires Python
-    python3Packages.requests  # For HTTP requests
-    python3Packages.pip  # For additional requirements
+    python3  # Provide a Python interpreter for custom scripts/plugins
   ];
 
   env = {
-    # SQLmap configuration directory
+    # Default locations so SQLmap can persist configs and outputs in the repo
     SQLMAP_CONFIG_DIR = "${toString ./.}/sqlmap";
-    # Custom output directory for scan results
     SQLMAP_OUTPUT_DIR = "${toString ./.}/sqlmap/output";
   };
 }

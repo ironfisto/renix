@@ -4,7 +4,6 @@
   packages = with pkgs; [
     # Amass and dependencies
     amass
-    caffix
     
     # Additional tools that work well with Amass
     graphviz  # For visualization

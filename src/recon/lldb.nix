@@ -2,12 +2,13 @@
 
 {
   packages = with pkgs; [
-    # Debuggers
+    # LLDB debugger with Python support available via Python 3
     lldb
-    lldb.python # Python bindings for LLDB
+    python3
   ];
 
   env = {
+    # Expose debugserver path for remote debugging workflows
     LLDB_DEBUGSERVER_PATH = "${pkgs.lldb}/bin/debugserver";
   };
 }

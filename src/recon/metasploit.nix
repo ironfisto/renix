@@ -6,7 +6,7 @@
     metasploit
     ruby
     postgresql    # Required for Metasploit database
-    gnome.zenity  # For some GUI elements
+    zenity  # For some GUI elements
   ];
 
   env = {

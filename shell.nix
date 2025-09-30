@@ -2,38 +2,23 @@
 
 let
   # Import all language configurations
-  rust = import ./src/langs/rust.nix { inherit pkgs; };
-  go = import ./src/langs/go.nix { inherit pkgs; };
-  c = import ./src/langs/c.nix { inherit pkgs; };
-  java = import ./src/langs/java.nix { inherit pkgs; };
-  scala = import ./src/langs/scala.nix { inherit pkgs; };
-  ruby = import ./src/langs/ruby.nix { inherit pkgs; };
-  zig = import ./src/langs/zig.nix { inherit pkgs; };
-  python = import ./src/langs/python.nix { inherit pkgs; };
+  langs = import ./src/langs/default.nix { inherit pkgs; };
   
   # Import recon tools
   recon = import ./src/recon/default.nix { inherit pkgs; };
+  cloud = import ./src/cloud/default.nix { inherit pkgs; };
 
   # Combine all packages
   allPackages = 
-    rust.packages ++
-    go.packages ++
-    c.packages ++
-    java.packages ++
-    scala.packages ++
+    langs.packages ++
     recon.packages ++
-    ruby.packages ++
-    zig.packages ++
-    python.packages;
+    cloud.packages;
 
   # Combine all environment variables
   allEnvVars = 
-    rust.env //
-    go.env //
-    java.env //
-    scala.env //
-    ruby.env //
-    python.env;
+    langs.env //
+    recon.env //
+    cloud.env;
 
 in pkgs.mkShell {
   buildInputs = allPackages;
@@ -49,6 +34,7 @@ in pkgs.mkShell {
     echo "- Ruby: $(ruby --version)"
     echo "- Zig: $(zig version)"
     echo "- Python: $(python3 --version)"
+    echo "- AWS CLI: $(aws --version)"
   '';
 
   # Set all environment variables

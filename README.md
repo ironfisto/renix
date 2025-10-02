@@ -18,6 +18,7 @@ Renix is a reproducible security tooling workspace built on Nix. It pins every d
 | FFuf | Reconnaissance | ✅ Ready |
 | Amass | Reconnaissance | ✅ Ready |
 | Metasploit | Exploitation | ✅ Ready |
+| Mimikatz | Credential Access | ✅ Ready |
 | GDB | Debugging | ✅ Ready |
 | LLDB | Debugging | ✅ Ready |
 | Rust Toolchain | Language | ✅ Ready |

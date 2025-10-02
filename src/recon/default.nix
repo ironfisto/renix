@@ -10,6 +10,7 @@ let
   ffuf = import ./ffuf.nix { inherit pkgs; };
   amass = import ./amass.nix { inherit pkgs; };
   nuclei = import ./nuclei.nix { inherit pkgs; };
+  mimikatz = import ./mimikatz.nix { inherit pkgs; };
 
 in {
   # Combine packages from all tools
@@ -21,7 +22,8 @@ in {
     metasploit.packages ++
     ffuf.packages ++
     amass.packages ++
-    nuclei.packages;
+    nuclei.packages ++
+    mimikatz.packages;
 
   # Combine environment variables
   env = 
@@ -32,5 +34,6 @@ in {
     metasploit.env //
     ffuf.env //
     amass.env //
-    nuclei.env;
+    nuclei.env //
+    mimikatz.env;
 }

@@ -1,5 +1,7 @@
 # Renix
 
+![Renix Banner](assets/image.png)
+
 Renix is a reproducible security tooling workspace built on Nix. It pins every dependency, so you get the same set of reconnaissance tools, debuggers, and language toolchains on any machine.
 
 ## Features

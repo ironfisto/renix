@@ -5,7 +5,7 @@
 Renix is a reproducible security tooling workspace built on Nix. It pins every dependency, so you get the same set of reconnaissance tools, debuggers, and language toolchains on any machine.
 
 ## Features
-- Unified environment for popular recon tools such as nmap, sqlmap, ffuf, amass, and Metasploit
+- Unified environment for popular recon tools such as nmap, sqlmap, ffuf, amass, Metasploit, and reverse engineering with Rizin
 - Language toolchains for Rust, Go, C/C++, Java, Scala, Ruby, Zig, and Python with useful extras preinstalled
 - Flake-enabled setup for repeatable builds and simple extension with custom modules
 - Modular structure: each toolchain lives in its own `src/**.nix` file for easy tweaking or removal
@@ -18,6 +18,7 @@ Renix is a reproducible security tooling workspace built on Nix. It pins every d
 | FFuf | Reconnaissance | ✅ Ready |
 | Amass | Reconnaissance | ✅ Ready |
 | Metasploit | Exploitation | ✅ Ready |
+| Rizin | Reverse Engineering | ✅ Ready |
 | Mimikatz | Credential Access | ✅ Ready |
 | GDB | Debugging | ✅ Ready |
 | LLDB | Debugging | ✅ Ready |
